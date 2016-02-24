@@ -145,7 +145,7 @@ class Blueprint
                 // index, so we will simply call the index methods without one.
                 if ($column->$index === true) {
                     $this->$index($column->name);
-
+           
                     continue 2;
                 }
 

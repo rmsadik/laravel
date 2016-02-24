@@ -13,11 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 // Route::get('/account','account@index');
+
 Route::get('/account',function(){
 	$tasks = Task::orderBy('created_at', 'asc')->get();
 	return view('account',array('index','tasks'=>$tasks));
 });
 
+Route::get('/account/login','AccountController@login');
 Route::delete('/account/{task}', function (Task $task) {
 	$task->delete();
 
@@ -38,8 +40,6 @@ Route::post('/account/add', function (Request $request) {
 	$task->save();
 	return redirect('/account');
 });
-	
-	
 
 
 /* Route::get('/', function () {
