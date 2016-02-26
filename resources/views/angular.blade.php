@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
         <script src="/js/controllers/mainCtrl.js"></script> 
+        <script src="/js/controllers/testJs.js"></script> 
 
         <style>
             html, body {
@@ -38,21 +39,47 @@
             }
         </style>
     </head>
-    <body>
+    <body ng-controller="myCtrl">
         <div class="container">
 <!--             <div class="content">
                 <div class="title">Angular</div>
             </div>
- -->        </div>
-        <div ng-app="myApp" ng-controller="myCtrl">
-                <h1>@{{ firstName + " " + lastName }}</h1>
-
-            <div ng-app="">
-                    <p>Input something in the input box:</p>
-                    <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
-                    <h1>Hello @{{name}}</h1>
-            </div>
+ -->       
+ 		 </div>
+ 		 
+        <div ng-app="myApp">
+                 <h1>@{{ firstName + " " + lastName }}</h1>
+    
+                 <div ng-app="">
+                        <p>Input something in the input box:</p>
+                        <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+                        <h1>H @{{name}}</h1>
+                </div>
+                 <div ng-app="" ng-init="names=[
+                {name:'Jani',country:'Norway'},
+                {name:'Hege',country:'Sweden'},
+                {name:'Kai',country:'Denmark'}]">
+                
+                <ul>
+                  <li ng-repeat="x	in names">
+                    @{{ x.name + ', ' + x.country }}
+                  </li>
+                </ul>
+                
+                </div>    
         </div>
+                       
         
+<!--              <div ng-app="myApp2" ng-controller="customersCtrl"> 
+            
+                    <table>
+                      <tr ng-repeat="y in names">
+                        <td>@{{ y.Name }}</td>
+                        <td>@{{ y.Country }}</td>
+                      </tr>
+                    </table>
+            </div>           
+ -->        
+    
     </body>
 </html>
