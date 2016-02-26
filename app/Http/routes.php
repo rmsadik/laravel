@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 | and give it the controller to call when that URI is requested.
 |
 */
-// Route::get('/account','account@index');
+Route::get('/angular',function () { return view('angular'); });
 
 Route::get('/account',function(){
 	$tasks = Task::orderBy('created_at', 'asc')->get();
