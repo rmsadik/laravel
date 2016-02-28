@@ -10,10 +10,11 @@ mainCtrl.controller('mainController',['$scope',function($scope){
 }]);
 */
 
-var app2 = angular.module('myApp2', []);
+/*var app2 = angular.module('myApp2', []);
 app2.controller('customersCtrl', function($scope, $http) {
 	$http.get("http://www.w3schools.com/angular/customers.php")
 	.then(function (response) {
 		$scope.names = response.data.records;
 	});
 });
+*/
