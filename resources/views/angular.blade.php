@@ -7,6 +7,10 @@
 
         <script src="/js/controllers/mainCtrl.js"></script> 
         <script src="/js/controllers/testJs.js"></script> 
+        
+		<script src="/js/controllers/invoice.js"></script>
+  		<script src="/js/controllers/finance.js"></script>        
+        
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         <style>
@@ -40,6 +44,7 @@
         </style>
     </head>
     <body>
+		    
         <div class="container">
 <!--             <div class="content">
                 <div class="title">Angular</div>
@@ -119,12 +124,32 @@
 						<input type="text" ng-model="firstname">
 						<input type="text" ng-model="user.lastName">
 					</form>					
-                </div>                
+                </div>    
                 
-        		
-            </div>
- 		 </div>
-        
+                <!-- Play 2 - Finance -->
+                <div ng-app="invoice" ng-controller="InvoiceController as invoice">
+                	<b>Invoice:</b>
+                  	<div>
+                    	Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
+                  	</div>
+                  	<div>
+                    	Costs: <input type="number" min="0" ng-model="invoice.cost" required >
+                    	<select ng-model="invoice.inCurr">
+                      		<option ng-repeat="c in invoice.currencies">@{{c}}</option>
+                    	</select>
+                  	</div>
+                  	<div>
+                    	<b>Total:</b>
+                    	<span ng-repeat="c in invoice.currencies">
+                      		@{{invoice.total(c) | currency:c}}
+                    	</span>
+                    	<button class="btn" ng-click="invoice.pay()">Pay</button>
+                  	</div>
+                </div>
+                
+                                
+    		</div>    <!-- Controller -->
+		</div>    <!-- Container -->
     
     </body>
 </html>
