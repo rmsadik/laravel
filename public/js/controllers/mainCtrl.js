@@ -87,7 +87,7 @@ app.controller('InvoiceController', ['currencyConverter', function(currencyConve
 	  this.pay = function pay() {
 	    window.alert("Thanks!");
 	  };
+	  
 }]);
-
 
 

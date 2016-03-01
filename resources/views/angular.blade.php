@@ -4,7 +4,9 @@
         <title>Laravel</title>
 
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-
+		 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" > -->
+        
         <script src="/js/controllers/mainCtrl.js"></script> 
         <script src="/js/controllers/testJs.js"></script> 
         
@@ -46,6 +48,7 @@
     <body>
 		    
         <div class="container">
+        <div class="alert alert-success" role="alert">Success</div>
 <!--             <div class="content">
                 <div class="title">Angular</div>
             </div>
@@ -120,7 +123,7 @@
 						<button ng-click="myClick()" ng-disabled="mySwitch">Click Me!</button>
 						<button ng-dblclick="myRandomClick()" >Click Me!</button>
 					</p>
-					<formag >
+					<form>
 						<input type="text" ng-model="firstname">
 						<input type="text" ng-model="user.lastName">
 					</form>					
@@ -146,7 +149,6 @@
                     	<button class="btn" ng-click="invoice.pay()">Pay</button>
                   	</div>
                 </div>
-                
                                 
     		</div>    <!-- Controller -->
 		</div>    <!-- Container -->

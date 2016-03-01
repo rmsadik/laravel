@@ -19,6 +19,11 @@ class Task extends Model
 		return 'hello world from controller : )';
 	}
  */	
+ 	public function getAllTasks()
+	{
+		return 'hello world from controller : )';
+	}
+ 	
     //
 }
 
