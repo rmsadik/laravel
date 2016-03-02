@@ -41,6 +41,7 @@ Route::post('/account/add', function (Request $request) {
 	return redirect('/account');
 });
 
+Route::get('/bootstrap',function () { return view('bootstrap'); });
 
 /* Route::get('/', function () {
     return view('welcome');
